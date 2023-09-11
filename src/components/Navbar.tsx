@@ -17,42 +17,64 @@ export function NavbarDefault() {
   }, []);
 
   const navList = (
-    <ul className="flex flex-col gap-2 mt-2 mb-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="flex flex-col gap-2 my-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
-        variant="h4"
+        variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-medium"
       >
-        <a href="#" className="flex items-center">
-          Home
+        <a
+          href="#"
+          className="flex items-center transition-colors hover:text-blue-500"
+        >
+          Pages
         </a>
       </Typography>
       <Typography
         as="li"
-        variant="h4"
+        variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-medium"
       >
-        <a href="#" className="flex items-center">
-          Explore
+        <a
+          href="#"
+          className="flex items-center transition-colors hover:text-blue-500"
+        >
+          Account
         </a>
       </Typography>
       <Typography
         as="li"
-        variant="h4"
+        variant="small"
         color="blue-gray"
-        className="p-1 font-normal"
+        className="p-1 font-medium"
       >
-        <a href="#" className="flex items-center">
-          Favorites
+        <a
+          href="#"
+          className="flex items-center transition-colors hover:text-blue-500"
+        >
+          Blocks
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium"
+      >
+        <a
+          href="#"
+          className="flex items-center transition-colors hover:text-blue-500"
+        >
+          Docs
         </a>
       </Typography>
     </ul>
   );
 
   return (
-    <nav className="max-w-screen-xl px-4 py-2 mx-auto lg:px-8 lg:py-4">
+    <nav className="sticky top-0 z-10 px-4 py-2 mx-auto bg-white max-w-screen lg:px-8 lg:py-4">
       <div className="container flex items-center justify-between mx-auto text-blue-gray-900">
         <img src={IMGS.Logo} className="w-auto h-12" />
         <div className="hidden lg:block">{navList}</div>
